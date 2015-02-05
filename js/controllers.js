@@ -1,19 +1,20 @@
 'use strict';
-angular.module('myApp.controllers', []).controller('NgGridCtrl',
-    ['$scope', 'dataService', function ($scope, dataService) {
-        $scope.data = dataService.data;
-        $scope.selection = [];
-        $scope.gridOptions = {
-            data: 'data',
-            columnDefs: [
-                {field: 'lang', displayName: 'Language', width: "45%"},
-                {field: 'year', displayName: 'Year', width: "25%"},
-                {field: 'decade', displayName: 'Decade', width: "30%"}
-            ],
-            showGroupPanel: true,
-            jqueryUIDraggable: true,
-            selectedItems: $scope.selection,
-            multiSelect: true,
-            enableCellEdit: true
-        };
+angular.module('SimplySocial.controllers', [])
+    .controller('AllPostsCtrl', ['$scope', 'PostService', function ($scope, PostService) {
+        console.log('AllPostsCtrl Instantiated');
+        $scope.posts = PostService.posts;
+    }])
+
+
+    .controller('AllPhotosCtrl', ['$scope', 'PhotoService', function ($scope, PhotoService) {
+        console.log('AllPhotosCtrl Instantiated');
+        $scope.posts = PhotoService.posts;
+    }])
+
+
+    .controller('AllVideosCtrl', ['$scope', 'VideoService', function ($scope, VideoService) {
+        console.log('AllVideosCtrl Instantiated');
+        $scope.posts = VideoService.posts;
     }]);
+
+

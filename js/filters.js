@@ -1,2 +1,2 @@
 'use strict';
-angular.module("myApp.filters", []);
+angular.module("SimplySocial.filters", []);
