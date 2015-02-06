@@ -1,4 +1,7 @@
-/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+Based on HTMLBoilerplate and expanded further
+gStarr
+*/
 
 html {
     color: #222;
@@ -7,12 +10,12 @@ html {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: none;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: none;
     text-shadow: none;
 }
 
@@ -52,12 +55,13 @@ textarea {
 }
 
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
+/*
+ Basics
+*/
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    padding:0 45px 0 45px;
 }
 
 .wrapper {
@@ -66,26 +70,87 @@ body {
 }
 
 /* ===================
-    ALL: Orange Theme
+    Main Color Settings and Layout
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #3b3b3b;
+    position: fixed;
+    top: 0;
+    height:60px;
+    background: #222 url("../assets/images/titleBarBkg.jpg");
+    /*width: 100%;*/
+    left:45px;
+    right: 45px;
 }
 
-.footer-container,
-.main aside {
-    border-top: 20px solid #858585;
+.header-container a img{
+    margin:18px 0 0 100px;
 }
 
-.header-container,
-.footer-container,
-.main aside {
-    background: #3b3b3b;
+.footer-container{
+    border-top: 1px solid #333333;
+    padding-top: 10px;
 }
+
 
 .title {
     color: white;
+}
+
+/* ==============
+    Wide: Article
+   ============== */
+
+article{
+    width:100%;
+    border-style: solid;
+    border-color: #ccc;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 20px;
+    margin:10px auto 10px auto;
+    color:#70767f;
+}
+
+article ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+article ul li{
+    display: inline;
+}
+
+article .avatarContainer{
+    background: #aaa;
+    border-radius: 4px;
+    width:45px;
+    height: 45px;
+    float:left;
+}
+
+article .mediaContainer{
+    height:100%;
+    max-height: 225px;
+}
+
+article h3{
+    margin-top: 9px;
+    padding-left:10px;
+}
+
+article header{
+    margin-left:50px;
+
+}
+
+article .title{
+    color:#3f454d;
+}
+
+article a{
+    color:#bec3cc;
 }
 
 /* ==============
@@ -107,18 +172,73 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 
-    color: #fbff63;
-    background: #858585;
+    color: white;
+}
+
+nav a:hover div{
+    border-color:#00cc99;
+    border-style: solid;
+    border-top:none;
+    border-left:none;
+    border-right:none;
 }
 
 nav a:hover,
 nav a:visited {
-    color: #69ddff;
+    color: #fff;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    border-bottom: 4px;
 }
+
+
+
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+
+    /*opacity: .50;*/
+    /*-webkit-opacity: .5;*/
+    /*-moz-opacity: .5;*/
+    /*filter: alpha(opacity=75);*/
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    box-shadow: 0 0 20px 0 #222;
+    -webkit-box-shadow: 0 0 20px 0 #222;
+    -moz-box-shadow: 0 0 20px 0 #222;
+    width: 37%;
+    margin: 80px auto 0 auto;
+    height: 185px;
+    padding: 0 5%;
+    position: fixed;
+    top: 12%;
+    left: 25%;
+    overflow-y: auto;
+    z-index: 1999;
+}
+
+
+.blurEffect{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
 
 /* ==============
     MOBILE: Main
@@ -180,9 +300,8 @@ nav a:hover {
 
     nav a {
         float: left;
-        width: 27%;
         margin: 0 1.7%;
-        padding: 25px 2%;
+        padding: 10px 2%;
         margin-bottom: 0;
     }
 
@@ -208,44 +327,93 @@ nav a:hover {
 }
 
 @media only screen and (min-width: 768px) {
+    
 
-/* ====================
-    WIDE: CSS3 Effects
-   ==================== */
-
-    .header-container,
-    .main aside {
-        -webkit-box-shadow: 0 5px 10px #aaa;
-           -moz-box-shadow: 0 5px 10px #aaa;
-                box-shadow: 0 5px 10px #aaa;
-    }
-
-/* ============
-    WIDE: Menu
-   ============ */
-
+    /* ============
+        WIDE: Menu
+       ============ */
     .title {
         float: left;
     }
 
     nav {
+        width: 100%;
+        margin: auto;
+        height: 100%;
+        display: block;
+    }
+
+    /* ============
+        WIDE: Main
+       ============ */
+    article,
+    .hero,
+    nav,
+    .main-container {
+        max-width: 575px;
+    }
+
+    .main-container{
+        margin:auto;
+    }
+
+    /*.main article {*/
+        /*float: left;*/
+        /*width: 57%;*/
+    /*}*/
+
+    .hero-container {
+        background: #000 url("../assets/images/heroBkg.png") no-repeat center;
+        background-size: cover;
+        padding-top: 120px;
+        padding-bottom: 40px;
+        margin-top: 60px;
+    }
+
+    .hero {
+        background: rgba(0, 178, 134, 0.7);
+        color: white;
+        font-family: "OpenSans";
+        font-weight: lighter;
+        font-size: 14pt;
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .hero input {
+        font-size: 30pt;
+        margin: 30px 0 15px 15px;
+        padding: 10px;
+        border: none;
+        background: transparent;
+    }
+
+    ::-webkit-input-placeholder {
+        color: rgba(255,255,255,0.70);
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        color: rgba(255,255,255,0.70);
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        color: rgba(255,255,255,0.70);
+    }
+
+    :-ms-input-placeholder {
+        color: rgba(255,255,255,0.70);
+    }
+
+    .hero:focus {
+        border: none;
+    }
+
+    .gridControlGroup {
         float: right;
-        width: 38%;
+        width: 75px;
     }
 
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        float: left;
-        width: 57%;
-    }
-
-    .main aside {
-        float: right;
-        width: 28%;
-    }
 }
 
 @media only screen and (min-width: 1140px) {

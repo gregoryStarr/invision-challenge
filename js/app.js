@@ -12,6 +12,7 @@ var SimplySocial = angular.module('SimplySocial', [
         function ($rootScope,   $state,   $stateParams) {
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
+            $rootScope.showModal=false;
         }
     ]
 )

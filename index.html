@@ -23,20 +23,44 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="header-container">
-            <header class="wrapper clearfix">
-                <h1 class="title">{{$rootScope.$scope}}</h1>
-                <nav>
-                    <ul class="nav">
-                        <li ui-sref-active="active" ng-class="{active: $state.includes('allPosts')}"><a ui-sref="allPosts" href="#/allPosts">All Posts</a></li>
-                        <li ng-class="{active: $state.includes('allPhotos')}"><a ui-sref="allPhotos" href="#/allPhotos">All Photos</a></li>
-                        <li ng-class="{active: $state.includes('allVideos')}"><a ui-sref="allVideos" href="#/allVideos">All Videos</a></li>
-                    </ul>
-                </nav>
+      <div ng-class="{'blurEffect' : $scope.showModal}">
 
-
-            </header>
+       <div class="header-container">
+            <a ui-sref="allPosts" href="#/allPosts"><img src="assets/images/logo.png"></a>
         </div>
+
+        <div class="hero-container">
+            <div class="hero">
+                <input type="text" placeholder="What's on your mind?">
+                <ul>
+                    <li ng-click="$scope.showModal=true">Add Photo</li>
+                    <li>Add Video</li>
+                </ul>
+            </div>
+
+            <nav>
+                <ul class="nav">
+                    <li ui-sref-active="active" ng-class="{active: $state.includes('allPosts')}"><a ui-sref="allPosts" href="#/allPosts">
+                        <div>
+                            All Posts
+                        </div>
+                    </a></li>
+                    <li ng-class="{active: $state.includes('allPhotos')}"><a ui-sref="allPhotos" href="#/allPhotos">
+                       <div> All Photos</div>
+                    </a></li>
+                    <li ng-class="{active: $state.includes('allVideos')}"><a ui-sref="allVideos" href="#/allVideos">
+                        <div>All Videos</div>
+                    </a></li>
+                    <li>
+                       <ul class="gridControlGroup">
+                           <li><a>List</a></li>
+                           <li><a>Grid</a></li>
+                       </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
 
         <div ui-view>Main View</div>
 
@@ -45,7 +69,20 @@
                 <h3>footer</h3>
             </footer>
         </div>
+      </div>
 
+
+        <div class="modal-background" ng-show="$scope.showModal" ng-click="$scope.showModal=false">
+
+            <div class="modal-content">
+                <div class="closer" ng-click="$scope.showModal=false">X</div>
+                <input type="text">
+                <ul>
+                    <li>Add Photo</li>
+                    <li>Add Video</li>
+                </ul>
+            </div>
+        </div>
 
         <script src="js/angular.js"></script>
         <script src="js/angular-ui-router.js"></script>
