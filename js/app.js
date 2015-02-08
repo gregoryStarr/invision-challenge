@@ -13,6 +13,8 @@ var SimplySocial = angular.module('SimplySocial', [
             $rootScope.$state = $state;
             $rootScope.$stateParams = $stateParams;
             $rootScope.showModal=false;
+            $rootScope.showHero=true;
+            $rootScope.listDisplayType="list";
         }
     ]
 )
@@ -54,6 +56,14 @@ var SimplySocial = angular.module('SimplySocial', [
                     url: '/allVideos',
                     templateUrl: 'views/allVideos.html',
                     controller: 'AllVideosCtrl'
+                })
+
+                // Sttings State
+                // ######################
+                .state('settings', {
+                    url: '/settings',
+                    templateUrl: 'views/settings.html',
+                    controller: 'SettingsCtrl'
                 })
         }
     ]

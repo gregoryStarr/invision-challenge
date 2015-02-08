@@ -45,7 +45,24 @@ angular.module('SimplySocial.services', [])
         ];
 
         return exports;
+    })
+
+
+    .factory('SettingService', function () {
+        var settings = {
+            name:"Gregory Starr",
+            email:"gstarr@invisionapp.com",
+            password:"justapassword",
+            avatarLarge:"myAvartar-large.png",
+            avatarMed:"myAvartar-med.png",
+            avatarSm:"myAvartar-sm.png"
+        };
+
+
+        return settings;
     });
+
+
 
 var li =function(){
     return "Lorem ipsum dolor sit amet, dolorum adipisci mediocrem mei in, ex pro tation legere ornatus. Cu augue viderer veritus mel, ea has ocurreret disputationi. Te sea prompta laoreet epicuri. Sea no munere gubergren consetetur, est solet nusquam ad, ex verear latine his. Et quo quando laoreet gubergren, cum ex civibus lobortis.";

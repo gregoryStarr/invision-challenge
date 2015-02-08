@@ -54,6 +54,9 @@ textarea {
     padding: 0.2em 0;
 }
 
+.hide{
+    display:none;
+}
 
 /*
  Basics
@@ -193,7 +196,17 @@ nav a:hover {
 }
 
 
+.hero-container {
+    background: #000 url("../assets/images/heroBkg.png") no-repeat center;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 60px;
+}
 
+.hero {
+    display:none;
+}
 
 .modal-background {
     position: fixed;
@@ -275,10 +288,40 @@ nav a:hover {
 }
 
 
+.settings{
+    padding-top:60px;
+}
 
+.settings header{
+    color:#aaaaaa;
+}
 
+.settings section{
+    margin: 20px 0 20px 0;
+}
 
+.settings section input{
+    color:#3f454d;
+    display:block;
+}
 
+.settings section .Settings{
+
+}
+
+.settings section ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.settings section ul li{
+    display:inline;
+}
+
+.section .avatar{
+    width:300px;
+}
 
 
 
@@ -294,9 +337,29 @@ nav a:hover {
 
 @media only screen and (min-width: 480px) {
 
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
+    .headerMenu{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        color:white;
+    }
+
+    .headerMenu li{
+        display:inline;
+    }
+
+    .headerMenu a, .headerMenu ul li a{
+        color:white;
+    }
+
+
+
+
+
+    /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
+
 
     nav a {
         float: left;
@@ -313,9 +376,9 @@ nav a:hover {
         margin-right: 0;
     }
 
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
 
     nav ul li {
         display: inline;
@@ -327,7 +390,7 @@ nav a:hover {
 }
 
 @media only screen and (min-width: 768px) {
-    
+
 
     /* ============
         WIDE: Menu
@@ -341,6 +404,94 @@ nav a:hover {
         margin: auto;
         height: 100%;
         display: block;
+    }
+
+
+    button{
+        border: none;
+    }
+    .headerNav{
+        float:right;
+        text-align:right;
+        width:400px;
+        margin-top: 10px;
+        margin-right: 100px;
+        color:white;
+        vertical-align: middle;
+    }
+    .header-container ul,
+    .headerNav ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .header-container ul li,
+    .headerNav ul li{
+        display:inline;
+    }
+
+
+    .headerNav .searchButton{
+        width:16px;
+        height:16px;
+        background: url("../assets/images/searchBtn.png");
+        position:absolute;
+        right:170px;
+        top:25px;
+    }
+
+    .headerNav .searchBox{
+        width:200px;
+        height:30px;
+        border-radius: 4px;
+        border-color: #858585;
+        border-style: solid;
+        display:inline;
+        background: url("../assets/images/titleBarBkg.jpg");
+    }
+
+    .headerNav .newMessage{
+        width:31px;
+        height:26px;
+        background: url("../assets/images/newMessage.png");
+        margin-right:10px;
+    
+        /* margin-top: 5px; */
+}
+
+    .headerNav .profileButton{
+        width:47px;
+        height:30px;
+        background: url("../assets/images/profileButton.png");
+        display:inline;
+    }
+
+    .sub-menu{
+        background: white;
+        border-radius: 4px;
+        color:#aaaaaa;
+        width:125px;
+        position:relative;
+        text-align: left;
+        float:right;
+        border: solid #aaaaaa thin;
+    }
+    .sub-menu div{
+        padding-left: 10px;
+    }
+
+    .sub-menu a{
+        color:#aaa;
+        text-decoration: none;
+    }
+
+    .btmBorder{
+        border: solid #aaa thin;
+        border-top:none;
+        border-left: none;
+        border-right: none;
+
     }
 
     /* ============
@@ -358,16 +509,26 @@ nav a:hover {
     }
 
     /*.main article {*/
-        /*float: left;*/
-        /*width: 57%;*/
+    /*float: left;*/
+    /*width: 57%;*/
     /*}*/
 
     .hero-container {
         background: #000 url("../assets/images/heroBkg.png") no-repeat center;
         background-size: cover;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 60px;
+    }
+
+    .hero {
+        display:block;
+    }
+
+    .hero-container {
         padding-top: 120px;
         padding-bottom: 40px;
-        margin-top: 60px;
+
     }
 
     .hero {
@@ -414,13 +575,16 @@ nav a:hover {
         width: 75px;
     }
 
+
+
+
 }
 
 @media only screen and (min-width: 1140px) {
 
-/* ===============
-    Maximal Width
-   =============== */
+    /* ===============
+        Maximal Width
+       =============== */
 
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
@@ -428,53 +592,8 @@ nav a:hover {
     }
 }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
 
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
 
 /* ==========================================================================
    Print styles
@@ -538,4 +657,54 @@ nav a:hover {
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
 }
