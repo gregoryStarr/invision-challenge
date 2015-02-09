@@ -1,7 +1,7 @@
-<div class="{{listDisplayType}} " ng-controller="AllPostsCtrl">
+<div class="{{listDisplayType}} " ng-controller="AllPhotosCtrl">
     <div>&nbsp;</div>
     <article ng-repeat="post in posts" class="{{cardType}}">
-       <div class="avatarContainer" style="background-image:url('assets/images/{{post.post.avatar}}');"></div>
+       <div class="avatarContainer" style="background-image:url('assets/images/{{post.post.avatar}}')"></div>
        <header>
            <h3>{{post.post.title}}</h3>
        </header>
@@ -9,7 +9,7 @@
 
            <details id="fn">
                <summary><label for="fn">Expand:</label></summary>
-               <div class="mediaContainer" style="background-image:url('assets/images/{{post.post.avatar}}');"></div>
+               <div class="mediaContainer" style="background-image:url('assets/images/{{post.post.avatar}}') no-repeat;"></div>
                <p>{{post.post.description}}</p>
            </details>
        </section>

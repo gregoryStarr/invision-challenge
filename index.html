@@ -114,14 +114,17 @@
 </div>
 
 
-<div class="modal-background" ng-show="$scope.showModal" ng-click="$scope.showModal=false">
+<div class="modal-background" ng-show="$scope.showModal">
 
     <div class="modal-content">
-        <div class="closer" ng-click="$scope.showModal=false">X</div>
-        <input type="text">
-        <ul>
-            <li>Add Photo</li>
-            <li>Add Video</li>
+        <button class="closer" ng-click="$scope.showModal=false"></button>
+        <span>
+            New Message
+        </span>
+        <input type="text" >
+        <ul class="addMediaList">
+            <li><button class="addPhotoButtonGrey"></button></li>
+            <li><button class="addVideoButtonGrey"></button></li>
         </ul>
     </div>
 </div>

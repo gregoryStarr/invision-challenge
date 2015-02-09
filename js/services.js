@@ -6,15 +6,24 @@ angular.module('SimplySocial.services', [])
         var exports = {};
         exports.posts = [
             {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
             {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
             {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
             {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"}
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"}
         ];
         return exports;
     })
@@ -22,14 +31,14 @@ angular.module('SimplySocial.services', [])
     .factory('PhotoService', function () {
         var exports = {};
         exports.posts=[
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"}
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"},
+            {post:{avatar:"avatar.male.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"photoPlaceHolder.png"}
         ];
 
         return exports;
@@ -39,9 +48,11 @@ angular.module('SimplySocial.services', [])
     .factory('VideoService', function () {
         var exports = {};
         exports.posts=[
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
             {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
-            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.female.2.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"},
+            {post:{avatar:"avatar.female.png",summary:"Simple Summary ...",title:Math.random().toString(36).slice(1) ,description:li()},media:"videoSrcPlaceHolder.png"}
         ];
 
         return exports;

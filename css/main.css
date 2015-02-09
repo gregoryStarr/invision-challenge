@@ -234,12 +234,11 @@ nav a:hover {
     -moz-box-shadow: 0 0 20px 0 #222;
     width: 37%;
     margin: 80px auto 0 auto;
-    height: 185px;
-    padding: 0 5%;
+    height: 125px;
+    padding: 20px 5%;
     position: fixed;
     top: 12%;
     left: 25%;
-    overflow-y: auto;
     z-index: 1999;
 }
 
@@ -338,7 +337,24 @@ nav a:hover {
     border-radius: 4px;
     margin: 10px 0 10px 0;
     width:100%;
+}
 
+.userSettings input[type='text']{
+    background: url("../assets/images/user.icon.png") no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.userSettings input[type='password']{
+    background: url("../assets/images/lockicon.png") no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
+}
+
+.userSettings input[type='email']{
+    background: url("../assets/images/mail.icon.png") no-repeat;
+    background-position: 10px center;
+    padding-left: 40px;
 }
 
 .notifications .sectionSpacer{
@@ -351,6 +367,20 @@ nav a:hover {
     float:left;
     margin: 5px 5px 5px 10px;
     padding: 5px;
+}
+
+.showList{
+    background: url("../assets/images/list.icon.png")no-repeat;
+    border:none;
+    width:16px;
+    height:16px;
+}
+
+.showGrid{
+    background: url("../assets/images/tile.icon.png")no-repeat;
+    border:none;
+    width:16px;
+    height:16px;
 }
 
 .addMediaList{
@@ -380,12 +410,47 @@ nav a:hover {
     height:14px;
 }
 
+.addPhotoButtonGrey{
+    background: url("../assets/images/addphoto.gray.icon.png") no-repeat;
+    border:none;
+    height:14px;
+    width:100px;
+    margin-left: 40px;
+}
+
+.addVideoButtonGrey{
+    background: url("../assets/images/addvideo.gray.icon.png") no-repeat;
+    border:none;
+    width:100px;
+    height:14px;
+}
+
+.modal-content input{
+    margin-left: 110px;
+    border:solid thin #aaa;
+    padding:10px;
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+    width:100%;
+}
+
 button{
     border: none;
 }
 
 .headerNav, .search , .newMessage, .gridControlGroup{
     display:none;
+}
+
+.closer{
+    background:#fff url("../assets/images/close.png")no-repeat;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: -20px;
+    right: -40px;
+    border-radius: 12px;
+
 }
 
 

@@ -1,4 +1,4 @@
-<div class="{{listDisplayType}} " ng-controller="AllPostsCtrl">
+<div class="{{listDisplayType}} " ng-controller="AllVideosCtrl">
     <div>&nbsp;</div>
     <article ng-repeat="post in posts" class="{{cardType}}">
         <div class="avatarContainer" style="background-image:url('assets/images/{{post.post.avatar}}');"></div>
@@ -9,7 +9,7 @@
 
             <details id="fn">
                 <summary><label for="fn">Expand:</label></summary>
-                <div class="mediaContainer" style="background-image:url('assets/images/{{post.post.avatar}}');"></div>
+                <img src="assets/images/videoSrcPlaceHolder.png" width="100%">
                 <p>{{post.post.description}}</p>
             </details>
         </section>
