@@ -1,5 +1,31 @@
 'use strict';
 angular.module('SimplySocial.controllers', [])
+    .controller('AppCtrl', ['$scope', function ($scope) {
+        console.log('App Instantiated');
+        $scope.showProfileMenu=false;
+        $scope.hoverIn = function(){
+            this.showProfileMenu = true;
+            console.log("show profile menu")
+        };
+
+        $scope.hoverOut = function(){
+            this.showProfileMenu = false;
+            console.log("hide profile menu")
+        };
+
+
+        $scope.switchListType = function (type){
+            console.log("LISTTYPE: "+type);
+            if(type == 'grid'){
+                $scope.cardType="gridCard"
+                $scope.listDisplayType="wide"
+            }else{
+                $scope.cardType=""
+                $scope.listDisplayType="main-container"
+            }
+        }
+    }])
+
     .controller('AllPostsCtrl', ['$scope', 'PostService', function ($scope, PostService) {
         console.log('AllPostsCtrl Instantiated');
         var showHero=true;

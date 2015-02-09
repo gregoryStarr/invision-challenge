@@ -14,7 +14,10 @@ var SimplySocial = angular.module('SimplySocial', [
             $rootScope.$stateParams = $stateParams;
             $rootScope.showModal=false;
             $rootScope.showHero=true;
-            $rootScope.listDisplayType="list";
+            $rootScope.displayGrid=true;
+            $rootScope.listDisplayType= "main-container";
+            $rootScope.cardType= "";
+
         }
     ]
 )
@@ -67,4 +70,6 @@ var SimplySocial = angular.module('SimplySocial', [
                 })
         }
     ]
+
+
 );

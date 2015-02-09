@@ -1,53 +1,46 @@
 <div class="main-container settings"   ng-controller="SettingsCtrl">
-   <div class="settingsContainer">
+    <div class="settingsContainer">
        <h1>
            Settings
        </h1>
        <form>
-           <section>
+           <section class="userDetails">
                <header>
-                   Account settings
+                   Account
                </header>
-               <ul>
-                   <li>
-                       <div class="avatar Settings">
-                           Avatar Settings
-                       </div>
+               <div class="avatarSettings">
+                   <img src="assets/images/avatarSettingsPage.png" class="userAvatar" ng-click="console.log('change pic')">
+               </div>
+               <div class="userSettings">
 
-                   </li>
-                   <li>
-                       <div class="user Settings">
-                           <input type="text" value="{{name}}">
-                           <input type="text" value="{{email}}">
-                           <input type="password" value="{{password}}">
-                       </div>
-                   </li>
-               </ul>
-           </section>
-           <section>
-               <header>
-                   Account settings
-               </header>
-               <div class="avatar Settings">
-                   Avatar Settings
+                   <input type="text" value="{{settings.name}}">
+                   <input type="email" value="{{settings.email}}">
+                   <input type="tel" value="{{settings.phone}}">
+                   <input type="password" value="{{settings.password}}">
                </div>
-               <div class="user Settings">
-                   User Settings
-               </div>
+
            </section>
-           <section>
+
+           <section class="notifications">
+               <div class="sectionSpacer">&nbsp;</div>
                <header>
                    Notifications
                </header>
-
+                <div>
+                    <input type="radio" name="postsMarkedFavorite" value="male">Email me when posts marked as favorites<br>
+                </div>
            </section>
-           <section>
+           <hr>
+           <section class="privacy">
+               <div class="sectionSpacer">&nbsp;</div>
                <header>
                    Privacy
                </header>
-
+               <div>
+                   <input type="radio" name="postsMarkedFavorite" value="male">Email me when posts marked as favorites<br>
+               </div>
            </section>
-           <button>Save Changes</button>
+           <button class="saveButton">Save Changes</button>
        </form>
    </div>
 </div> <!-- #main-container -->

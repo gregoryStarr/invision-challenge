@@ -18,7 +18,7 @@
 
 
 </head>
-<body ng-app="SimplySocial">
+<body ng-app="SimplySocial" ng-controller="AppCtrl">
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -42,9 +42,9 @@
                             <button ng-click="doSearch('Search');" class="searchButton"></button>
                             </a>
                         <li>
-                            <a class="profileMenu" ng-click="$scope.showProfileMenu=true">
-                                <button class="profileButton"></button>
-                                <div class="sub-menu" ng-show="$scope.showProfileMenu">
+                            <a class="profileMenu" ng-mouseover="hoverIn();">
+                               <span><button class="profileButton"></button>
+                                <div class="sub-menu" ng-show="showProfileMenu" ng-mouseleave="hoverOut();">
                                     <div class="btmBorder">
                                         <a href="">Profile</a>
                                     </div>
@@ -58,6 +58,7 @@
                                         <a  ui-sref="settings" href="#/settings">Settings</a>
                                     </div>
                                 </div>
+                                </span>
                             </a>
                          </li>
                     </ul>
@@ -70,19 +71,21 @@
     <div class="hero-container" ng-show="!$state.includes('settings')">
         <div class="hero">
             <input type="text" placeholder="What's on your mind?">
-            <ul>
-                <li>Add Photo</li>
-                <li>Add Video</li>
+            <ul class="addMediaList">
+                <li><button class="addPhotoButton"></button></li>
+                <li><button class="addVideoButton"></button></li>
             </ul>
         </div>
 
         <nav>
             <ul class="nav">
-                <li ui-sref-active="active" ng-class="{active: $state.includes('allPosts')}"><a ui-sref="allPosts" href="#/allPosts">
+                <li ui-sref-active="active" ng-class="{active: $state.includes('allPosts')}">
+                    <a ui-sref="allPosts" href="#/allPosts">
                     <div>
                         All Posts
                     </div>
-                </a></li>
+                    </a>
+                </li>
                 <li ng-class="{active: $state.includes('allPhotos')}"><a ui-sref="allPhotos" href="#/allPhotos">
                     <div> All Photos</div>
                 </a></li>
@@ -91,8 +94,8 @@
                 </a></li>
                 <li>
                     <ul class="gridControlGroup">
-                        <li><button class="showList"></button></li>
-                        <li><button class="showGrid"></button></li>
+                        <li><button class="showList" ng-click="switchListType('list')"></button></li>
+                        <li><button class="showGrid"  ng-click="switchListType('grid')"></button></li>
                     </ul>
                 </li>
             </ul>

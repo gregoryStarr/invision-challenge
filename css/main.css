@@ -87,12 +87,13 @@ body {
 }
 
 .header-container a img{
-    margin:18px 0 0 100px;
+    margin:10px 0 0 0;
 }
 
 .footer-container{
     border-top: 1px solid #333333;
     padding-top: 10px;
+    float:left;
 }
 
 
@@ -110,7 +111,6 @@ article{
     border-color: #ccc;
     border-width: 1px;
     border-radius: 4px;
-    padding: 20px;
     margin:10px auto 10px auto;
     color:#70767f;
 }
@@ -145,7 +145,7 @@ article h3{
 
 article header{
     margin-left:50px;
-
+    width: 150px !important;
 }
 
 article .title{
@@ -197,7 +197,7 @@ nav a:hover {
 
 
 .hero-container {
-    background: #000 url("../assets/images/heroBkg.png") no-repeat center;
+    background: #333;
     background-size: cover;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -265,10 +265,6 @@ nav a:hover {
     font-size: 2em;
 }
 
-.main-container aside {
-    color: #8f8f8f;
-    padding: 0px 5% 10px;
-}
 
 .footer-container footer {
     color: #8f8f8f;
@@ -289,15 +285,16 @@ nav a:hover {
 
 
 .settings{
-    padding-top:60px;
+    padding-top:90px;
 }
 
 .settings header{
     color:#aaaaaa;
+    text-transform: uppercase;
 }
 
 .settings section{
-    margin: 20px 0 20px 0;
+    margin: 40px 0 20px 0;
 }
 
 .settings section input{
@@ -305,28 +302,91 @@ nav a:hover {
     display:block;
 }
 
-.settings section .Settings{
-
-}
-
-.settings section ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.settings section ul li{
-    display:inline;
-}
-
-.section .avatar{
+.settings section header{
     width:300px;
 }
 
 
 
+.avatarSettings{
+    width:100px;
+    float:left;
+}
+
+.userAvatar{
+    cursor: pointer;
+}
+
+.userSettings{
+    width:300px;
+    display:inline;
+    margin-left: 10px;
+    position: relative;
+    left: 0px;
+    top:0px;
+    float:left;
+
+}
+
+.userSettings input[type='text'],
+.userSettings input[type='tel'],
+.userSettings input[type='email'],
+.userSettings input[type='password']{
+    margin-left: 110px;
+    border:solid thin #aaa;
+    padding:5px;
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+    width:100%;
+
+}
+
+.notifications .sectionSpacer{
+    margin:100px !important;
+}
 
 
+.gridCard{
+    max-width:315px;
+    float:left;
+    margin: 5px 5px 5px 10px;
+    padding: 5px;
+}
+
+.addMediaList{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.addMediaList li{
+    display:inline;
+    width:100px;
+}
+
+
+.addPhotoButton{
+    background: url("../assets/images/addPhoto.png") no-repeat;
+    border:none;
+    height:14px;
+    width:100px;
+    margin-left: 40px;
+}
+
+.addVideoButton{
+    background: url("../assets/images/addVideo.png") no-repeat;
+    border:none;
+    width:100px;
+    height:14px;
+}
+
+button{
+    border: none;
+}
+
+.headerNav, .search , .newMessage, .gridControlGroup{
+    display:none;
+}
 
 
 
@@ -336,6 +396,17 @@ nav a:hover {
    ========================================================================== */
 
 @media only screen and (min-width: 480px) {
+    .hero-container{
+        background: url("../assets/images/heroBkg.png") no-repeat center;
+    }
+
+    .headerNav, .search , .newMessage, .gridControlGroup{
+        display:inherit;
+    }
+
+    .gridControlGroup{
+        display:inherit;
+    }
 
     .headerMenu{
         margin: 0;
@@ -389,7 +460,7 @@ nav a:hover {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 845px) {
 
 
     /* ============
@@ -407,9 +478,12 @@ nav a:hover {
     }
 
 
-    button{
-        border: none;
+
+
+    .header-container a img{
+        margin:18px 0 0 100px;
     }
+
     .headerNav{
         float:right;
         text-align:right;
@@ -507,6 +581,16 @@ nav a:hover {
     .main-container{
         margin:auto;
     }
+    
+    .wide{
+        max-width: 11140px !important;
+        margin-left:60px;
+    }
+
+
+    nav{
+       margin-top:40px
+    }
 
     /*.main article {*/
     /*float: left;*/
@@ -516,20 +600,16 @@ nav a:hover {
     .hero-container {
         background: #000 url("../assets/images/heroBkg.png") no-repeat center;
         background-size: cover;
-        padding-top: 20px;
         padding-bottom: 20px;
         margin-top: 60px;
+        padding-top: 60px !important;
+        padding-bottom: 40px;
     }
 
     .hero {
         display:block;
     }
 
-    .hero-container {
-        padding-top: 120px;
-        padding-bottom: 40px;
-
-    }
 
     .hero {
         background: rgba(0, 178, 134, 0.7);
@@ -538,8 +618,8 @@ nav a:hover {
         font-weight: lighter;
         font-size: 14pt;
         width: 100%;
-        margin: auto;
-
+        margin:auto;
+        height: 160px;
     }
 
     .hero input {
