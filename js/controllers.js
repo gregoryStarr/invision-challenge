@@ -32,44 +32,44 @@ angular.module('SimplySocial.controllers', [])
     }])
 
     .controller('AllPostsCtrl', ['$scope', 'PostService', function ($scope, PostService) {
+        $scope.posts={};
         console.log('AllPostsCtrl Instantiated');
         var showHero=true;
         $scope.showHero=showHero;
-        $scope.posts = PostService.posts;
+        $scope.posts = PostService;
     }])
 
 
     .controller('AllPhotosCtrl', ['$scope', 'PhotoService', function ($scope, PhotoService) {
+        $scope.posts={};
         console.log('AllPhotosCtrl Instantiated');
         var showHero=true;
         $scope.showHero=showHero;
-        $scope.posts = PhotoService.posts;
+        $scope.posts = PhotoService;
     }])
 
 
     .controller('AllVideosCtrl', ['$scope', 'VideoService', function ($scope, VideoService) {
+        $scope.posts={};
         console.log('AllVideosCtrl Instantiated');
         var showHero=true;
         $scope.showHero=showHero;
-        $scope.posts = VideoService.posts;
+        $scope.posts = VideoService;
     }])
 
     .controller('SettingsCtrl', ['$scope', 'SettingService', function ($scope, SettingService) {
         console.log('SettingsCtrl Instantiated');
         var showHero=false;
         $scope.showHero=showHero;
-        $scope.settings = SettingService.settings;
-
+        //$scope.settings = SettingService.settings;
+        $rootScope.settings=SettingService;
     }])
-    .controller('CardCtrl', ['$scope', '', function ($scope) {
-        console.log('Card Controller Instantiated');
-        var showComments=false;
 
-        $scope.expandComments = function (val){
-            showComments = val?true:false;
-        }
-        $scope.settings = SettingService.settings;
-
+    .controller('CardCtrl',  ['$scope', 'CardService', function ($scope, CardService) {
+        console.log('CardCtrl Instantiated');
+        var showCommenta=false;
+        var dataProvider = '';
+        var service = '';
     }]);
 
 

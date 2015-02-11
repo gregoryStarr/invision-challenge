@@ -24,7 +24,6 @@
 </head>
 <body ng-app="SimplySocial" ng-controller="AppCtrl">
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <div ng-class="{'blurEffect' : $scope.showModal}">
@@ -110,16 +109,20 @@
     </div>
 
 
-    <div ui-view>Main View</div>
+    <div ui-view></div>
 
-    <div class="footer-container">
-        <footer class="wrapper">
-            <h3>footer</h3>
-        </footer>
-    </div>
+
 </div>
+<div class="footer-container">
 
-
+    <footer class="">
+        <a>About us</a>
+        <a>Support </a>
+        <a>Privacy</a>
+        <a>Terms</a>
+    </footer>
+</div>
+<a href="#" class="TOP">TOP</a>
 <div class="modal-background" ng-class="{'showModal':$scope.showModal}" >
 
     <div class="modal-content">

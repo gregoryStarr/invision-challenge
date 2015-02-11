@@ -1,0 +1,25 @@
+<article ng-repeat="post in posts" class="{{cardType}}">
+
+    <img class="avatarContainer" src="assets/images/{{post.item.avatar}}">
+    <header>
+        <h3>{{post.item.name}}</h3>
+    </header>
+    <section>
+        <b> {{post.item.summary}} </b>
+
+        <p>{{post.item.description}}</p>
+        <button ng-click="showComments=true" ng-show="!showComments">Expand:</button>
+        <button ng-click="showComments=false" ng-show="showComments">Collapse:</button>
+        <div id="commentsContainer" ng-show="showComments">
+
+            <img src='assets/images/{{post.item.photoMedia}}' width="100%">
+
+            <div class="commentItem" ng-repeat="comment in post.item.comments">
+                <h4>{{comment.title}}</h4>
+
+                <p>{{comment.comments}}</p>
+            </div>
+            <input type="text" value="Reply..." >
+        </div>
+    </section>
+</article> <!-- #main-container -->

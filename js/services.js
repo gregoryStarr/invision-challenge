@@ -3,74 +3,42 @@
 /** data service, manages data model throughout the lifecycle of the application */
 angular.module('SimplySocial.services', [])
     .factory('PostService', function () {
-        var exports = {};
-        exports.posts = [
-            {post:getPost('JAMES', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('JENNIE', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('JACK', "male","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('JIMMY', "male","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('MALCOMN', "male","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('MATHEW', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('MAYBELLE', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('MAX', "male","")},
-            {post:getPost('Name', "male","")}
+        var posts=[
+            {item:getPost('mike', "male.2","")},
+            {item:getPost('joe', "male","")},
+            {item:getPost('dame', "female","")},
+            {item:getPost('dude', "male","")},
+            {item:getPost('china', "female","")}
         ];
-        return exports;
+        return posts;
     })
 
     .factory('PhotoService', function () {
-        var exports = {};
-        exports.posts=[
-            {post:getPost('JAMES', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('JENNIE', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('JACK', "male","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('JIMMY', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('JANICE', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('Name', "female","")}
+        var posts=[
+            {item:getPost('mANE', "male","")},
+            {item:getPost('sdfdbsg', "male","")},
+            {item:getPost('Sam', "male.2","")},
+            {item:getPost('Stew', "male","")},
+            {item:getPost('monica', "female.2","")},
+            {item:getPost('dustin', "male","")},
+            {item:getPost('mANE', "female","")}
         ];
 
-        return exports;
+        return posts;
     })
 
 
     .factory('VideoService', function () {
-        var exports = {};
-        exports.posts=[
-            {post:getPost('mANE', "male","")},
-            {post:getPost('MARY', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('MADISON', "female","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('MALCOMN', "male","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('MATHEW', "male","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('MAYBELLE', "female","")},
-            {post:getPost('Name', "female","")},
-            {post:getPost('Name', "male","")},
-            {post:getPost('MAX', "male","")},
-            {post:getPost('Name', "male","")}
-        ];
 
-        return exports;
+       var posts=[
+           {item:getPost('Sam', "male.2","")},
+           {item:getPost('Stew', "male","")},
+           {item:getPost('monica', "female.2","")},
+           {item:getPost('dustin', "male","")},
+           {item:getPost('sheera', "female.2","")}
+       ];
+
+        return posts;
     })
 
 
@@ -87,6 +55,10 @@ angular.module('SimplySocial.services', [])
 
 
         return settings;
+    })
+
+     .factory('CardService', function () {
+        return this.services;
     });
 
 
@@ -114,5 +86,5 @@ var getName = function(type){
 }
 
 var li =function(){
-    return "Lorem ipsum dolor sit amet, dolorum adipisci mediocrem mei in, ex pro tation legere ornatus. Cu augue viderer veritus mel, ea has ocurreret disputationi. Te sea prompta laoreet epicuri. Sea no munere gubergren consetetur, est solet nusquam ad, ex verear latine his. Et quo quando laoreet gubergren, cum ex civibus lobortis.";
+    return "Lorem ipsum dolor sit amet, dolorum adipisci mediocrem mei in, ex pro tation legere ornatus.";
 }

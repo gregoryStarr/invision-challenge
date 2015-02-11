@@ -13,9 +13,9 @@
                </div>
                <div class="userSettings">
 
-                   <input type="text" value="{{settings.name}}">
-                   <input type="email" value="{{settings.email}}">
-                   <input type="password" value="{{settings.password}}">
+                   <input type="text" value="{{SettingService.name}}">
+                   <input type="email" value="{{email}}">`
+                   <input type="password" value="{{password}}">
                </div>
 
            </section>
@@ -25,8 +25,12 @@
                <header>
                    Notifications
                </header>
-                <div>
-                    <input type="checkbox" name="postsMarkedFavorite" value="male">Email me when posts marked as favorites<br>
+                <div class="flatOneRoundedCheckbox">
+
+                    <input value="1" id="flatOneRoundedCheckbox" name="" type="checkbox">
+                    <label for="flatOneRoundedCheckbox"></label>
+                    <div></div>
+
                 </div>
            </section>
            <hr>
