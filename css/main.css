@@ -64,7 +64,7 @@ textarea {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    padding:0 45px 0 45px;
+    padding:0;
 }
 
 .wrapper {
@@ -82,8 +82,8 @@ body {
     height:60px;
     background: #222 url("../assets/images/titleBarBkg.jpg");
     /*width: 100%;*/
-    left:45px;
-    right: 45px;
+    left:0;
+    right: 0;
 }
 
 .header-container a img{
@@ -106,13 +106,14 @@ body {
    ============== */
 
 article{
-    width:100%;
+    wisth:100%;
     border-style: solid;
     border-color: #ccc;
     border-width: 1px;
     border-radius: 4px;
-    margin:10px auto 10px auto;
     color:#70767f;
+    padding: 4px;
+    margin: 8px;
 }
 
 article ul{
@@ -215,7 +216,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
-
+    display: none;
     /*opacity: .50;*/
     /*-webkit-opacity: .5;*/
     /*-moz-opacity: .5;*/
@@ -223,6 +224,9 @@ nav a:hover {
     z-index: 1000;
 }
 
+.showModal{
+    display: inherit !important;
+}
 .modal-content {
     background: #fff;
 
@@ -363,8 +367,8 @@ nav a:hover {
 
 
 .gridCard{
-    max-width:315px;
-    float:left;
+    max-width:100%;
+    width:100%;
     margin: 5px 5px 5px 10px;
     padding: 5px;
 }
@@ -460,349 +464,12 @@ button{
    Media Queries
    ========================================================================== */
 
-@media only screen and (min-width: 480px) {
-    .hero-container{
-        background: url("../assets/images/heroBkg.png") no-repeat center;
-    }
-
-    .headerNav, .search , .newMessage, .gridControlGroup{
-        display:inherit;
-    }
-
-    .gridControlGroup{
-        display:inherit;
-    }
-
-    .headerMenu{
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        color:white;
-    }
-
-    .headerMenu li{
-        display:inline;
-    }
-
-    .headerMenu a, .headerMenu ul li a{
-        color:white;
-    }
-
-
-
-
-
-    /* ====================
-        INTERMEDIATE: Menu
-       ==================== */
-
-
-    nav a {
-        float: left;
-        margin: 0 1.7%;
-        padding: 10px 2%;
-        margin-bottom: 0;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-    /* ========================
-        INTERMEDIATE: IE Fixes
-       ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-}
-
-@media only screen and (min-width: 845px) {
-
-
-    /* ============
-        WIDE: Menu
-       ============ */
-    .title {
-        float: left;
-    }
-
-    nav {
-        width: 100%;
-        margin: auto;
-        height: 100%;
-        display: block;
-    }
-
-
-
-
-    .header-container a img{
-        margin:18px 0 0 100px;
-    }
-
-    .headerNav{
-        float:right;
-        text-align:right;
-        width:400px;
-        margin-top: 10px;
-        margin-right: 100px;
-        color:white;
-        vertical-align: middle;
-    }
-    .header-container ul,
-    .headerNav ul{
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-    }
-
-    .header-container ul li,
-    .headerNav ul li{
-        display:inline;
-    }
-
-
-    .headerNav .searchButton{
-        width:16px;
-        height:16px;
-        background: url("../assets/images/searchBtn.png");
-        position:absolute;
-        right:170px;
-        top:25px;
-    }
-
-    .headerNav .searchBox{
-        width:200px;
-        height:30px;
-        border-radius: 4px;
-        border-color: #858585;
-        border-style: solid;
-        display:inline;
-        background: url("../assets/images/titleBarBkg.jpg");
-    }
-
-    .headerNav .newMessage{
-        width:31px;
-        height:26px;
-        background: url("../assets/images/newMessage.png");
-        margin-right:10px;
-    
-        /* margin-top: 5px; */
-}
-
-    .headerNav .profileButton{
-        width:47px;
-        height:30px;
-        background: url("../assets/images/profileButton.png");
-        display:inline;
-    }
-
-    .sub-menu{
-        background: white;
-        border-radius: 4px;
-        color:#aaaaaa;
-        width:125px;
-        position:relative;
-        text-align: left;
-        float:right;
-        border: solid #aaaaaa thin;
-    }
-    .sub-menu div{
-        padding-left: 10px;
-    }
-
-    .sub-menu a{
-        color:#aaa;
-        text-decoration: none;
-    }
-
-    .btmBorder{
-        border: solid #aaa thin;
-        border-top:none;
-        border-left: none;
-        border-right: none;
-
-    }
-
-    /* ============
-        WIDE: Main
-       ============ */
-    article,
-    .hero,
-    nav,
-    .main-container {
-        max-width: 575px;
-    }
-
-    .main-container{
-        margin:auto;
-    }
-    
-    .wide{
-        max-width: 11140px !important;
-        margin-left:60px;
-    }
-
-
-    nav{
-       margin-top:40px
-    }
-
-    /*.main article {*/
-    /*float: left;*/
-    /*width: 57%;*/
-    /*}*/
-
-    .hero-container {
-        background: #000 url("../assets/images/heroBkg.png") no-repeat center;
-        background-size: cover;
-        padding-bottom: 20px;
-        margin-top: 60px;
-        padding-top: 60px !important;
-        padding-bottom: 40px;
-    }
-
-    .hero {
-        display:block;
-    }
-
-
-    .hero {
-        background: rgba(0, 178, 134, 0.7);
-        color: white;
-        font-family: "OpenSans";
-        font-weight: lighter;
-        font-size: 14pt;
-        width: 100%;
-        margin:auto;
-        height: 160px;
-    }
-
-    .hero input {
-        font-size: 30pt;
-        margin: 30px 0 15px 15px;
-        padding: 10px;
-        border: none;
-        background: transparent;
-    }
-
-    ::-webkit-input-placeholder {
-        color: rgba(255,255,255,0.70);
-    }
-
-    :-moz-placeholder { /* Firefox 18- */
-        color: rgba(255,255,255,0.70);
-    }
-
-    ::-moz-placeholder {  /* Firefox 19+ */
-        color: rgba(255,255,255,0.70);
-    }
-
-    :-ms-input-placeholder {
-        color: rgba(255,255,255,0.70);
-    }
-
-    .hero:focus {
-        border: none;
-    }
-
-    .gridControlGroup {
-        float: right;
-        width: 75px;
-    }
-
-
-
-
-}
-
-@media only screen and (min-width: 1140px) {
-
-    /* ===============
-        Maximal Width
-       =============== */
-
-    .wrapper {
-        width: 1026px; /* 1140px - 10% for margins */
-        margin: 0 auto;
-    }
-}
-
 
 
 
 /* ==========================================================================
    Print styles
    ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #858585 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
 
 
 
@@ -853,3 +520,41 @@ button{
 .clearfix {
     *zoom: 1;
 }
+
+.commentItem h4, .commentItem p{
+    margin: 2px;
+    padding:2px;
+}
+
+#commentsContainer{
+    background: rgba(175,175,175,.25);
+    border-radius: 6px;
+    border: solid thin #eee;
+    margin: 2px;
+    padding:2px;
+    text-align: center;
+}
+.commentItem{
+    background: rgba(175,175,175,.25);
+    border: solid thin #ccc;
+    border-left: none;
+    border-right: none;
+    padding: 5px;
+    border:solid thin #bbb;
+    text-align: left;
+}
+
+.commentItemEven{
+    background: rgba(175,175,175,.25) !important;
+}
+
+#commentsContainer input{
+    width: 80%;
+    margin: 6px 10px 6px 10px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: solid thin #eee;
+    PADDING:4PX;
+}
+
+

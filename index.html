@@ -12,9 +12,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/normalize.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media-intermidiate.css">
+    <link rel="stylesheet" href="./css/media-print.css">
+    <link rel="stylesheet" href="./css/media-small.css">
+    <link rel="stylesheet" href="./css/media-wide.css">
+    <link rel="stylesheet" href="./css/mygrid.css">
 
 
 </head>
@@ -34,17 +38,19 @@
                 <div class="headerNav">
                     <ul>
                         <li>
-                            <button  ng-click="$scope.showModal=true" class="newMessage"></button>
+                            <span>
+                                <button  ng-click="$scope.showModal=true" class="newMessage"></button>
+                            </span>
                         </li>
                         <li>
                             <a class="search">
                             <input type="text" class="searchBox">
                             <button ng-click="doSearch('Search');" class="searchButton"></button>
                             </a>
-                        <li>
-                            <a class="profileMenu" ng-mouseover="hoverIn();">
-                               <span><button class="profileButton"></button>
-                                <div class="sub-menu" ng-show="showProfileMenu" ng-mouseleave="hoverOut();">
+                        <li ng-mouseleave="hoverOut();" ng-mouseover="hoverIn();">
+                            <a class="profileMenu" >
+                               <span ><button class="profileButton"></button>
+                                <div class="sub-menu" ng-class="{'showSubMenu':showProfileMenu}" >
                                     <div class="btmBorder">
                                         <a href="">Profile</a>
                                     </div>
@@ -114,7 +120,7 @@
 </div>
 
 
-<div class="modal-background" ng-show="$scope.showModal">
+<div class="modal-background" ng-class="{'showModal':$scope.showModal}" >
 
     <div class="modal-content">
         <button class="closer" ng-click="$scope.showModal=false"></button>
@@ -128,6 +134,8 @@
         </ul>
     </div>
 </div>
+
+
 
 <script src="./js/angular.js"></script>
 <script src="./js/angular-ui-router.js"></script>

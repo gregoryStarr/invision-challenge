@@ -1,0 +1,66 @@
+
+@media only screen and (min-width: 480px) {
+    .hero-container{
+        background: url("../assets/images/heroBkg.png") no-repeat center;
+    }
+
+    .headerNav, .search , .newMessage, .gridControlGroup{
+        display:inherit;
+    }
+
+    .gridControlGroup{
+        display:inherit;
+    }
+
+    .headerMenu{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        color:white;
+    }
+
+    .headerMenu li{
+        display:inline;
+    }
+
+    .headerMenu a, .headerMenu ul li a{
+        color:white;
+    }
+
+
+
+
+
+    /* ====================
+        INTERMEDIATE: Menu
+       ==================== */
+
+
+    nav a {
+        float: left;
+        margin: 0 1.7%;
+        padding: 10px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+    /* ========================
+        INTERMEDIATE: IE Fixes
+       ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
