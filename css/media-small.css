@@ -5,7 +5,7 @@
     }
 
     .headerNav, .search , .newMessage, .gridControlGroup{
-        display:inherit;
+        display:none;
     }
 
     .gridControlGroup{
@@ -28,39 +28,34 @@
     }
 
 
+    nav a:hover,
+    nav a:visited {
+        color: #fff;
+    }
 
+    nav a:hover {
+        border-bottom: 4px;
+    }
 
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
 
-    /* ====================
-        INTERMEDIATE: Menu
-       ==================== */
-
+    nav ul li{
+        display:inline;
+    }
 
     nav a {
-        float: left;
-        margin: 0 1.7%;
-        padding: 10px 2%;
-        margin-bottom: 0;
-    }
+        margin-bottom: 10px;
+        padding: 5px 0;
 
-    nav li:first-child a {
-        margin-left: 0;
-    }
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
 
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-    /* ========================
-        INTERMEDIATE: IE Fixes
-       ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
+        color: white;
     }
 }
 

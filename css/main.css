@@ -28,6 +28,10 @@ hr {
     padding: 0;
 }
 
+button{
+    background-color: rgba(255,255,255,0) !important;
+}
+
 audio,
 canvas,
 iframe,
@@ -65,6 +69,7 @@ textarea {
 body {
     font: 16px/26px tahoma;
     padding:0;
+    color:#aaaaaa;
 }
 
 
@@ -190,47 +195,42 @@ article a{
     MOBILE: Menu
    ============== */
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+.navList{
+    display:block;
 }
 
-nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 5px 0;
+.navList a {
+    margin: auto;
+    padding: 10px 2%;
+    margin-bottom: 0;
+}
 
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
 
-    color: white;
+
+.navList  li, .navList li a div{
+    display: inline;
+    wwidth: 120px !important;
 }
 
 nav a:hover div{
-    border-color:#00cc99;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    1border-color:#00cc99;
     border-style: solid;
     border-top:none;
     border-left:none;
     border-right:none;
 }
 
-nav a:hover,
-nav a:visited {
-    color: #fff;
-}
-
-nav a:hover {
-    border-bottom: 4px;
-}
 
 
 .hero-container {
     background: #333;
     background-size: cover;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 0 important;
     margin-top: 60px;
 }
 
@@ -239,6 +239,11 @@ nav a:hover {
 }
 
 .modal-background {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     position: fixed;
     top: 0;
     left: 0;
@@ -254,11 +259,20 @@ nav a:hover {
 }
 
 .showModal{
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     display: inherit !important;
 }
 .modal-content {
     background: #fff;
-
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -267,7 +281,7 @@ nav a:hover {
     -moz-box-shadow: 0 0 20px 0 #222;
     width: 37%;
     margin: 80px auto 0 auto;
-    height: 125px;
+    height: 175px;
     padding: 20px 5%;
     position: fixed;
     top: 12%;
@@ -277,6 +291,11 @@ nav a:hover {
 
 
 .blurEffect{
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
@@ -312,6 +331,11 @@ nav a:hover {
 }
 
 .main-container{
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     padding: 0 20px 0px 20px;
 }
 
@@ -556,6 +580,11 @@ button{
 }
 
 #commentsContainer{
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     background:#F9FAFC;
     border-radius: 6px;
     border: solid thin #eee;
@@ -564,6 +593,11 @@ button{
     text-align: center;
 }
 .commentItem{
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     background: transparent;
     border: solid thin rgba(175,175,175,.25);
     border-radius: 4px;
@@ -589,32 +623,96 @@ button{
 
 }
 
-.flatOneRoundedCheckbox input[type="checkbox"]:checked ~ div {
-    background: none repeat scroll 0% 0% #4FBE79;
-}
-.flatOneRoundedCheckbox div {
-    width: 100%;
-    height: 100%;
-    background: none repeat scroll 0% 0% #D3D3D3;
-    border-radius: 50px;
-    position: relative;
-    top: -30px;
-}
-.flatOneRoundedCheckbox {
-    width: 120px;
-    height: 40px;
-    margin: 20px 50px;
+.checkboxThree {
+    width: 40px;
+    height: 20px;
+    background: #01B286;
+    margin: 10px 20px;
+
+    border-radius: 15px;
     position: relative;
 }
-.flatRoundedCheckbox label {
+
+
+input[type=checkbox], input[type=radio] {
+    visibility: hidden;
+}
+.checkboxThree:before {
+    position: absolute;
+    top: 12px;
+    left: 13px;
+    height: 2px;
+    color: #26ca28;
+    font-size: 16px;
+}
+
+.checkboxThree:after {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    height: 2px;
+    color: #111;
+    font-size: 16px;
+}
+
+.checkboxThree label {
     display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    transition: all 0.5s ease 0s;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
     cursor: pointer;
     position: absolute;
-    top: 5px;
+    top: 1px;
     z-index: 1;
-    left: 8px;
-    background: none repeat scroll 0% 0% #FFF;
+    left: 2px;
+    background: #ddd;
+}
+
+/**
+ * Create the checkbox event for the label
+ */
+.checkboxThree input[type=checkbox]:checked + label {
+    left: 20px;;
+}
+
+
+.saveButton{
+    background:#00cc99;
+    border-radius: 4px;
+    color:white;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+
+.radioButton label {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    z-index: 1;
+    left: 2px;
+    background: #ddd;
+}
+
+.radioButton {
+    width: 40px;
+    height: 40px;
+    background: #01B286;
+    margin: 20px 20px;
+    border-radius: 20px;
+    position: relative;
+}

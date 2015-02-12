@@ -13,6 +13,11 @@
         margin: auto;
         height: 100%;
         display: block;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
     }
 
     .header-container a img {
@@ -27,10 +32,16 @@
         margin-right: 100px;
         color: white;
         vertical-align: middle;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
     }
 
     .header-container ul,
     .headerNav ul {
+
         margin: 0;
         padding: 0;
         list-style-type: none;
@@ -87,6 +98,11 @@
     }
 
     .sub-menu {
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        transition: all .5s ease;
         background: white;
         border-radius: 4px;
         color: #aaaaaa;
@@ -141,6 +157,9 @@
         margin-top: 40px
     }
 
+    .headerNav, .search , .newMessage, .gridControlGroup{
+        display:inherit !important;
+    }
     /*.main article {*/
     /*float: left;*/
     /*width: 57%;*/
@@ -148,10 +167,8 @@
     .hero-container {
         background: #000 url("../assets/images/heroBkg.png") no-repeat center;
         background-size: cover;
-        padding-bottom: 20px;
         margin-top: 60px;
         padding-top: 60px !important;
-        padding-bottom: 40px;
     }
 
     .hero {
