@@ -210,11 +210,24 @@ article a{
     margin-bottom: 0;
 }
 
-
+.header-container ul{
+    list-style-type: none;
+}
 
 .navList  li, .navList li a div{
     display: inline;
     wwidth: 120px !important;
+}
+
+.navList a,
+.navList a:visited,
+.navList a:active,
+nav a:hover,
+nav a:active,
+nav a:visited {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 nav a:hover div{
